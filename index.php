@@ -1,31 +1,25 @@
-<?php
-phpinfo();
-$categorias = [];
-$categorias[] = 'infantil';
-$categorias[] = 'adolescente';
-$categorias[] = 'adulto';
+<!DOCTYPE html>
+<html>
 
-$nome = 'Gabriel';
-$idade = 8;
+<head>
+    <meta charset="utf-8">
+    <title>Primeiro projeto PHP</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width-device-width, initial-scale-1">
+    <link rel="stylesheet" href="Css/style.css">
+</head>
 
-//print_r($categorias);
+<body>
+    <div class = "box"> 
+ <p>FORMULARIO PARA INSCRICAO DE NADADADORES</p>
 
-  if($idade >= 6 AND $idade <= 12){
-    for($i = 0; $i < count($categorias);$i ++){
-        if($categorias[$i] == 'infantil'){
-            echo 'O nadador '.$nome.'  e da categoria '.$categorias[$i];
-        }
-    }
-  }else if($idade <= 18){
-    for($i = 0; $i < count($categorias);$i ++){
-        if($categorias[$i] == 'adolescente'){
-            echo 'O nadador '.$nome.'  e da categoria '.$categorias[$i];
-        }
-    }
-  }else{
-    for($i = 0; $i < count($categorias);$i ++){
-        if($categorias[$i] == 'adulto'){
-            echo 'O nadador '.$nome.'  e da categoria '.$categorias[$i];
-        }
-    }
-  }
+ <form action="script.php" method = "post" class="form">
+    <input type="text" name="nome" placeholder="nome"/> 
+    <br/><br/>
+    <input type="text" name="idade" placeholder="idade"/> 
+    <br/><br/>
+    <input type="submit"/>
+     </div>   
+ </form>
+</body>
