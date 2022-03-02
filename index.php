@@ -1,5 +1,7 @@
  <?php 
-   session_start();
+   include 'servico/servicoMensagemSessao.php';
+   include 'servico/servicoValidacao.php';
+   include 'servico/servicoValidaCategoria.php';
  ?>
 
 <!DOCTYPE html>
@@ -23,12 +25,12 @@
      /***IF TERNARIO*** 
        *E um if escrito em uma unica linha, o '?' representa a execucao caso seja verdadeiro, ou seja, seria 
       as chaves '{}' no if comum, o ':' representa o else*/
-      $mensagemDeSucesso = isset($_SESSION['mensagem de sucesso']) ? $_SESSION['mensagem de sucesso'] : '';
+      $mensagemDeSucesso = getMensagemSucesso();
       if(!empty($mensagemDeSucesso)){
           echo $mensagemDeSucesso;
           echo '<br/>';
       }
-      $mensagemDeErro = isset($_SESSION['mensagem de erro']) ? $_SESSION['mensagem de erro'] : '';
+      $mensagemDeErro = getMensagemErro();
       if(!empty($mensagemDeErro)){
           echo $mensagemDeErro;
           echo '<br/>';
